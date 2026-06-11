@@ -1,0 +1,10 @@
+how laravel works internally
+  1. user sends a request
+  2. request enters index.php this is an entry gate of the laravel
+  3. composer autoloads all classes
+  4. laravel bootstraps application ( prepares  the framework, it sets up core binding and all configurations)
+  5. middleware runs ( middleware binding ,it checks request before it reaches the route like authentication check, or logging etc)
+  6. route matching takes place ( laravel matches requested url, view mthod renders, respons to browser)
+  7. controller method executes
+  8. view renders response
+  9. response sent back to browser.
