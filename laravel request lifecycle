@@ -1,4 +1,5 @@
-how laravel works internally
+                            laravel request cycle
+
   1. user sends a request
   2. request enters index.php this is an entry gate of the laravel
   3. composer autoloads all classes
@@ -8,3 +9,71 @@ how laravel works internally
   7. controller method executes
   8. view renders response
   9. response sent back to browser.
+
+
+6/12/2026
+
+                 Laravel folder and files
+
+1. App: the brain of the framework where most of the codes lie.
+    Model: communincates with the db
+     controller: fetches, processes data
+
+2.config folder: contains configuration of how different parts of framework behave.
+     what db should be used?
+     what timezone should be used?
+     how should login work? etc
+     app.php: contains general application settings
+     database.php: contains db connection configurations
+     auth.php: contains authenticationsettings like controlling login, register, password reset etc
+     filesystems.php: contains file storage cnfigurations, like where should  uploaded files be stored
+     mail.php: contains email service settings
+
+3.database folder: contains files related to db streucture and db management
+    creating tables
+    adding test data etc
+
+4.migrations: used fpr creating tables 
+    bash:  php artisan migrate
+
+5.seeders: inserts reuqired data into db
+   for inital data 
+
+6. factories: generates fake data automatically instead of manually entering
+
+7.storage: stores files while running an app
+
+8.vendor: contains all composer-installed pacl=kages and dependencies
+
+9. .gitignore: a git cnfiguration that tells git which files shoudl not be tracked
+
+10. .gitattributes: maintains consistency between developers, how files should be handlded
+
+11.composer.json: main dependency config file for php packages
+
+12. composer.lock: stores exact installed versions of packages
+
+13. package-lock.json:  stores exact versions of node.js  packages
+    genrated after runing npm install
+
+14. phpunit.xml: config files for php unit testing framework
+
+15. artisan : command-line tool for laravel
+
+16. provider: contains service providers
+     services to be registered and configured before starting an app
+
+17. queue.php: a system that laravel perform certain later instead of making a user wait
+
+18. config/services.php: stores third-party configurations
+
+19. session.php: contains sessions configurations
+      session: temporary memory for a user.
+
+20. public folder: contain files thta needs be used by the browser directly
+
+21. vite.config.js: configuration file for vite
+      vite:  a front-end build tool used to process css, js, images, tailwindcss, vue and react and prepare them for the browser.
+       vite also contains hot reloading, prepares frontend files for production
+
+
