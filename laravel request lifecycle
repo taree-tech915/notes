@@ -15,11 +15,11 @@
 
                  Laravel folder and files
 
-1. App: the brain of the framework where most of the codes lie.
+1.  App: the brain of the framework where most of the codes lie.
     Model: communincates with the db
      controller: fetches, processes data
 
-2.config folder: contains configuration of how different parts of framework behave.
+2. config folder: contains configuration of how different parts of framework behave.
      what db should be used?
      what timezone should be used?
      how should login work? etc
@@ -29,27 +29,35 @@
      filesystems.php: contains file storage cnfigurations, like where should  uploaded files be stored
      mail.php: contains email service settings
 
-3.database folder: contains files related to db streucture and db management
+3. database folder: contains files related to db streucture and db management
     creating tables
     adding test data etc
 
-4.migrations: used fpr creating tables 
+4. migrations: used fpr creating tables 
     bash:  php artisan migrate
 
-5.seeders: inserts reuqired data into db
+5. seeders: inserts reuqired data into db
    for inital data 
 
 6. factories: generates fake data automatically instead of manually entering
 
-7.storage: stores files while running an app
+7. storage: stores files while running an app
 
-8.vendor: contains all composer-installed pacl=kages and dependencies
+8.  vendor: contains all composer-installed packages, dependencies, libraries.
+    laravel's code lives in vendor
+    where does it come from? its created by composer
+    composer: package manager for php
+    whats stored in vendor? laravel framework code is stored here.
+
+   vendor/laravel: contains laravel framework code which contains classes(rotuing, controllers, middleware, db, auth, blade)
+   vendor/monolog: handles logging
+  vendor/composer: 
 
 9. .gitignore: a git cnfiguration that tells git which files shoudl not be tracked
 
 10. .gitattributes: maintains consistency between developers, how files should be handlded
 
-11.composer.json: main dependency config file for php packages
+11. composer.json: main dependency config file for php packages
 
 12. composer.lock: stores exact installed versions of packages
 
@@ -58,10 +66,10 @@
 
 14. phpunit.xml: config files for php unit testing framework
 
-15. artisan : command-line tool for laravel
+15. artisan: command-line tool for laravel
 
 16. provider: contains service providers
-     services to be registered and configured before starting an app
+      services to be registered and configured before starting an app
 
 17. queue.php: a system that laravel perform certain later instead of making a user wait
 
@@ -76,4 +84,4 @@
       vite:  a front-end build tool used to process css, js, images, tailwindcss, vue and react and prepare them for the browser.
        vite also contains hot reloading, prepares frontend files for production
 
-
+22. middleware: a code that checks a request before it reaches its destination
